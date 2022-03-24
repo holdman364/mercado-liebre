@@ -1,0 +1,141 @@
+:root{
+  --amarillo: #EAC926;
+  --azul: #03264C;
+  --celeste: #1259c3;
+  --gris-oscuro: #666;
+  --gris-claro: #ebebeb;
+  --verde: #39b54a;
+}
+
+
+label{
+    font-size: 15px;
+}
+
+/* Main */
+main{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    margin: 25px auto;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    border: white solid 2px;
+    
+}
+
+main form{
+    background: white;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+main form .inputcaja,
+.password{
+    margin: 10px 0;
+}
+.password{
+    width: 90%;
+    margin: auto;
+}
+main form .inputcaja input,
+main .password input{
+    color: var(--gris-oscuro);
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px;
+    width: 90%;
+    border: solid var(--gris-oscuro) 1.5px;
+    transition: .5s;
+}
+
+main form .inputcaja input:hover,
+.password input:hover{
+    border: solid 1.5px var(--celeste);
+}
+
+.botones{
+    display: flex;
+    justify-content: center;
+}
+
+.buton{
+    background: var(--gris-claro);
+    font-size: 24px;
+    padding: 5px 15px;
+    margin: 10px ;
+    border-radius: 5px;
+    width: 150px;
+    border: solid 3px var(--celeste);
+    transition: .5s;
+}
+
+.buton a{
+    color: var(--celeste);
+    text-decoration: none;
+    transition: .5s;
+}
+
+.buton:hover{
+    background: #0022AA;
+    border: solid 3px#0022AA;
+    color: var(--gris-claro);
+}
+
+.buton a:hover{
+    color: var(--gris-claro);
+}
+
+/*CHECKBOX Y RADIO*/
+
+input[type="radio"],
+input[type="checkbox"]{
+    display: none;
+}
+
+.radio-caja label,
+.checkbox-caja label{
+    color: var(--celeste);
+    padding: 5px 15px;
+    display: inline-block;
+    position: relative;
+    font-size: 1em;
+    border: solid 2px var(--celeste);
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.radio-caja label:hover,
+.checkbox-caja label:hover{
+    background: var(--gris-claro);
+}
+
+
+
+input[type="radio"]:checked + label,
+input[type="checkbox"]:checked + label{
+    padding: 5px 15px;
+    background: var(--celeste);
+    color: var(--gris-claro);
+}
+
+@media (min-width: 361px){
+    main{
+        width: 40%;
+    }
+
+    main form{
+        width: 80%;
+    }
+
+    .password{
+        width: 80%;
+    }
+}
